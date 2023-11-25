@@ -905,6 +905,26 @@ async function copySelectedTabAsMarkdownLink(tab) {
   };
 }
 
+// function to be called from playwright/puppeteer via
+// extension_background_page.evaluate("getMarkdownFromCurrentTab()")
+// return the markdown string directly.
+// This is mostly fashioned after copyMarkdownFromContext
+async function getMarkdownFromCurrentTab() {
+  const tab = browser.tabs.getCurrent()
+  try {
+    await ensureScripts(tab.id);
+
+  const article = await getArticleFromContent(tab.id, false);
+  const { markdown } = await convertArticleToMarkdown(article, downloadImages = false);
+  return JSON.stringify(markdown)
+  }
+  catch (error) {
+    // This could happen if the extension is not allowed to run code in
+    // the page, for example if the tab is a privileged page.
+    console.error("Failed to get text: " + error);
+  };
+}
+
 // function to copy markdown to the clipboard, triggered by context menu
 async function copyMarkdownFromContext(info, tab) {
   try{
