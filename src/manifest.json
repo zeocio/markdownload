@@ -1,4 +1,6 @@
 {
+  "id": "nddfeegcclfmbjcplpghmkfeapfockca",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnVXsIyGQBOOekALqCecx2BBIJlWSxTAjgysKWiH3z8YBs33p48b/HzvoHXRUGrOBku5ZL9qCuG+geiYKlEu2UWSd8rH/kYF9HvDEaLK331k7CHlEoMuLiss7vUM4ZcDnFWM5Nw4Ev85Y5wMmy3Y1AK3N3cc11XOKcPwiHUprw3ow0YjkbA7GEm1z2GZ8dSNwuUaixyARbsZ7NA4WI2OT3BeBlOwgFg38xFNkJ+G+ewgK64wH9ahjTG6DKBwR/7j+7dTy6ABYEPivAT5UIqXXeOMt4uxO6ZsiiO3FrdjVCgW2VUtv0tixnE7gs3OpS3/v8K1pyhpwdq1dtc/3XLQA3QIDAQAB",
   "manifest_version": 2,
   "name": "MarkDownload - Markdown Web Clipper",
   "version": "3.2.1",
